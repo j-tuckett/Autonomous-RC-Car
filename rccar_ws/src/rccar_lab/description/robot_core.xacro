@@ -44,6 +44,8 @@
   <link
     name="base_link">
   </link>
+
+  <!-- Chassis -->
   <link
     name="chassis_link">
     <inertial>
@@ -94,7 +96,12 @@
     <axis
       xyz="0 0 0" />
   </joint>
+  
+  <gazebo reference="chassis_link">
+      <material>Gazebo/Grey</material>
+  </gazebo>
 
+  <!-- Electrical Box -->
   <link
     name="ebox_link">
     <inertial>
@@ -145,6 +152,13 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
+  <gazebo reference="ebox_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- Battery -->
+
   <link
     name="battery_link">
     <inertial>
@@ -195,6 +209,12 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
+    <gazebo reference="battery_link">
+      <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- LiDAR -->
   <link
     name="lidar_link">
     <inertial>
@@ -245,6 +265,12 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
+  <gazebo reference="lidar_link">
+      <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- Front Right Wheel -->
   <link
     name="fr_wheel_link">
     <inertial>
@@ -295,6 +321,13 @@
     <axis
       xyz="0 1 0" />
   </joint>
+
+  <gazebo reference="fr_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <!-- Front Left Wheel -->
+
   <link
     name="fl_wheel_link">
     <inertial>
@@ -345,6 +378,12 @@
     <axis
       xyz="0 1 0" />
   </joint>
+  <gazebo reference="fr_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <!-- Back Left Wheel-->
+
   <link
     name="bl_wheel_link">
     <inertial>
@@ -395,6 +434,12 @@
     <axis
       xyz="0 1 0" />
   </joint>
+
+  <gazebo reference="bl_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <!-- Back Right Wheel -->
   <link
     name="br_wheel_link">
     <inertial>
@@ -445,4 +490,8 @@
     <axis
       xyz="0 1 0" />
   </joint>
+
+  <gazebo reference="br_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
 </robot>
