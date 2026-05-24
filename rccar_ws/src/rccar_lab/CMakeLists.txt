@@ -23,15 +23,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install (DIRECTORY launch
-  DESTINATION share/${PROJECT_NAME}
-  )
-
-install (DIRECTORY description
-  DESTINATION share/${PROJECT_NAME}
-  )
-
-install (DIRECTORY config
+install (DIRECTORY launch description config car_urdf
   DESTINATION share/${PROJECT_NAME}
   )
 

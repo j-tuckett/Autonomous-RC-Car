@@ -1,0 +1,17 @@
+[0.024s] Invoking command in '/home/ubuntu/source/rccar_ws/build/rccar_lab': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/source/rccar_ws/build/rccar_lab -- -j22 -l22
+[0.148s] Invoked command in '/home/ubuntu/source/rccar_ws/build/rccar_lab' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/source/rccar_ws/build/rccar_lab -- -j22 -l22
+[0.162s] Invoking command in '/home/ubuntu/source/rccar_ws/build/rccar_lab': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/source/rccar_ws/build/rccar_lab
+[0.174s] -- Install configuration: ""
+[0.176s] -- Execute custom install script
+[0.178s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/rsp.launch.py
+[0.179s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot.urdf.xacro
+[0.179s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot_core.xacro
+[0.180s] [31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:105 (message):
+[0.180s]   ament_cmake_symlink_install_directory() can't find
+[0.180s]   '/home/ubuntu/source/rccar_ws/src/rccar_lab/car_urdf'
+[0.181s] Call Stack (most recent call first):
+[0.181s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:319 (ament_cmake_symlink_install_directory)
+[0.182s]   cmake_install.cmake:46 (include)
+[0.182s] 
+[0.182s] [0m
+[0.182s] Invoked command in '/home/ubuntu/source/rccar_ws/build/rccar_lab' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/source/rccar_ws/build/rccar_lab

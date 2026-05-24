@@ -1,0 +1,13 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/rsp.launch.py
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot.urdf.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot_core.xacro
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:105 (message):
+  ament_cmake_symlink_install_directory() can't find
+  '/home/ubuntu/source/rccar_ws/src/rccar_lab/car_urdf'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:319 (ament_cmake_symlink_install_directory)
+  cmake_install.cmake:46 (include)
+
+[0m

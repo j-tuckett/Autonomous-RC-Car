@@ -1,0 +1,50 @@
+[0.042s] Invoking command in '/home/ubuntu/source/rccar_ws/build/rccar_lab': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/source/rccar_ws/src/rccar_lab -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/source/rccar_ws/install/rccar_lab
+[0.502s] -- The C compiler identification is GNU 13.3.0
+[0.696s] -- The CXX compiler identification is GNU 13.3.0
+[0.737s] -- Detecting C compiler ABI info
+[0.907s] -- Detecting C compiler ABI info - done
+[0.921s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.922s] -- Detecting C compile features
+[0.923s] -- Detecting C compile features - done
+[0.939s] -- Detecting CXX compiler ABI info
+[1.090s] -- Detecting CXX compiler ABI info - done
+[1.100s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.101s] -- Detecting CXX compile features
+[1.102s] -- Detecting CXX compile features - done
+[1.151s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.400s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.551s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.676s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.895s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.895s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.897s] -- Added test 'lint_cmake' to check CMake code style
+[1.901s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.903s] -- Added test 'xmllint' to check XML markup files
+[1.910s] -- Configuring done (1.7s)
+[1.922s] -- Generating done (0.0s)
+[1.926s] -- Build files have been written to: /home/ubuntu/source/rccar_ws/build/rccar_lab
+[1.933s] Invoked command in '/home/ubuntu/source/rccar_ws/build/rccar_lab' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/source/rccar_ws/src/rccar_lab -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/source/rccar_ws/install/rccar_lab
+[1.936s] Invoking command in '/home/ubuntu/source/rccar_ws/build/rccar_lab': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/source/rccar_ws/build/rccar_lab -- -j22 -l22
+[1.999s] Invoked command in '/home/ubuntu/source/rccar_ws/build/rccar_lab' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/source/rccar_ws/build/rccar_lab -- -j22 -l22
+[2.013s] Invoking command in '/home/ubuntu/source/rccar_ws/build/rccar_lab': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/source/rccar_ws/build/rccar_lab
+[2.032s] -- Install configuration: ""
+[2.033s] -- Execute custom install script
+[2.035s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/rsp.launch.py
+[2.049s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot.urdf.xacro
+[2.062s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot_core.xacro
+[2.078s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/ament_index/resource_index/package_run_dependencies/rccar_lab
+[2.094s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/ament_index/resource_index/parent_prefix_path/rccar_lab
+[2.110s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/ament_prefix_path.sh
+[2.128s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/ament_prefix_path.dsv
+[2.147s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/path.sh
+[2.165s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/path.dsv
+[2.178s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.bash
+[2.193s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.sh
+[2.207s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.zsh
+[2.230s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.dsv
+[2.243s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/package.dsv
+[2.257s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/ament_index/resource_index/packages/rccar_lab
+[2.278s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/cmake/rccar_labConfig.cmake
+[2.291s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/cmake/rccar_labConfig-version.cmake
+[2.306s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/package.xml
+[2.322s] Invoked command in '/home/ubuntu/source/rccar_ws/build/rccar_lab' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/source/rccar_ws/build/rccar_lab
