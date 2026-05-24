@@ -106,7 +106,7 @@
     type="fixed">
     <origin
       xyz="-0.0036768 -0.095982 0.0485"
-      rpy="1.5708 0 0" />
+      rpy="0 0 0" />
     <parent
       link="chassis_link" />
     <child
@@ -159,7 +159,7 @@
     type="fixed">
     <origin
       xyz="-0.0036768 -0.095982 0.0285"
-      rpy="1.5708 0 0" />
+      rpy="0 0 0" />
     <parent
       link="chassis_link" />
     <child
@@ -212,7 +212,7 @@
     type="fixed">
     <origin
       xyz="-0.016177 -0.095982 0.13493"
-      rpy="1.5708 0 0" />
+      rpy="0 0 0" />
     <parent
       link="chassis_link" />
     <child
@@ -245,7 +245,7 @@
           filename="package://rccar_lab/car_urdf/meshes/fr_wheel_link.STL" />
       </geometry>
       <material
-        name="">
+        name="wheel_color">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
