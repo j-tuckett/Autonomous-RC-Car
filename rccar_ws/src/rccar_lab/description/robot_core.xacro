@@ -3,7 +3,44 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
+  xmlns:xacro="http://www.ros.org/wiki/xacro"
   name="robot">
+
+  <!-- Material Definitions -->
+  <material
+    name="chassis_color">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+
+  <material
+    name="ebox_color">
+    <color
+      rgba="0 0 0 1" />
+  </material>
+
+  <material
+    name="battery_color">
+    <color
+      rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+  </material>
+
+  <material
+    name="lidar_color">
+    <color
+      rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+  </material>
+
+  <material
+    name="wheel_color">
+    <color
+      rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+  </material>
+
+
+
+  <!-- Robot -->
+
   <link
     name="base_link">
   </link>
@@ -32,10 +69,7 @@
           filename="package://rccar_lab/car_urdf/meshes/base_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
+        name="chassis_color"/>
     </visual>
     <collision>
       <origin
@@ -86,10 +120,7 @@
           filename="package://rccar_lab/car_urdf/meshes/ebox_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0 0 0 1" />
-      </material>
+        name="ebox_color"/>
     </visual>
     <collision>
       <origin
@@ -106,7 +137,7 @@
     type="fixed">
     <origin
       xyz="-0.0036768 -0.095982 0.0485"
-      rpy="0 0 0" />
+      rpy="${pi/2} 0 0" />
     <parent
       link="chassis_link" />
     <child
@@ -139,10 +170,7 @@
           filename="package://rccar_lab/car_urdf/meshes/battery_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
-      </material>
+        name="battery_color"/>
     </visual>
     <collision>
       <origin
@@ -159,7 +187,7 @@
     type="fixed">
     <origin
       xyz="-0.0036768 -0.095982 0.0285"
-      rpy="0 0 0" />
+      rpy="${pi/2} 0 0" />
     <parent
       link="chassis_link" />
     <child
@@ -192,10 +220,7 @@
           filename="package://rccar_lab/car_urdf/meshes/lidar_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+        name="lidar_color"/>
     </visual>
     <collision>
       <origin
@@ -212,7 +237,7 @@
     type="fixed">
     <origin
       xyz="-0.016177 -0.095982 0.13493"
-      rpy="0 0 0" />
+      rpy="${pi/2} 0 0" />
     <parent
       link="chassis_link" />
     <child
@@ -245,10 +270,7 @@
           filename="package://rccar_lab/car_urdf/meshes/fr_wheel_link.STL" />
       </geometry>
       <material
-        name="wheel_color">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+        name="wheel_color"/>
     </visual>
     <collision>
       <origin
@@ -298,10 +320,7 @@
           filename="package://rccar_lab/car_urdf/meshes/fl_wheel_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+        name="wheel_color"/>
     </visual>
     <collision>
       <origin
@@ -351,10 +370,7 @@
           filename="package://rccar_lab/car_urdf/meshes/bl_wheel_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+        name="wheel_color"/>
     </visual>
     <collision>
       <origin
@@ -404,10 +420,7 @@
           filename="package://rccar_lab/car_urdf/meshes/br_wheel_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+        name="wheel_color"/>
     </visual>
     <collision>
       <origin
