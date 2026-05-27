@@ -3,8 +3,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
-from launch.actions import SetEnvironmentVariable
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 from launch_ros.actions import Node
@@ -76,17 +75,22 @@ def generate_launch_description():
         output='screen'
     )
 
-    # Set up controller spawners
-    diff_drive_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["diff_cont"],
+    # Delay spawners to ensure Gazebo + clock bridge are ready
+    diff_drive_spawner = TimerAction(
+        period=3.0,
+        actions=[Node(
+            package="controller_manager",
+            executable="spawner",
+            arguments=["diff_cont"],
+            parameters=[{"use_sim_time": True}],
+        )]
     )
 
     joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_broad"],
+        parameters=[{"use_sim_time": True}],
     )
 
     # Launch everything
@@ -99,3 +103,6 @@ def generate_launch_description():
         diff_drive_spawner,
         joint_broad_spawner
     ])
+
+
+# ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -r /cmd_vel:=/diff_cont/cmd_vel   -p stamped:=true
