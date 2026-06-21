@@ -40,9 +40,16 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'gz_args': '-r empty.sdf'
+            'gz_args': '-r ' + os.path.join(
+                get_package_share_directory(package_name),
+                'config',
+                'worlds',
+                'default.sdf'
+            )
+#             'gz_args': '-r empty.sdf'
         }.items()
     )
+
 
     # set resource path to fix error where it can't find meshes
     gz_resource_path = SetEnvironmentVariable(
