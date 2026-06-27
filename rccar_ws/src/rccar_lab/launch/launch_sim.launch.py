@@ -61,12 +61,13 @@ def generate_launch_description():
         )
     )
 
-    # Make clock bridge
-    clock_bridge = Node(
+    # Make Gazebo bridge
+    gazebo_bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=[
-            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan'
         ],
         output='screen'
     )
@@ -106,7 +107,7 @@ def generate_launch_description():
         rsp,
         gazebo,
         spawn_entity,
-        clock_bridge,
+        gazebo_bridge,
         diff_drive_spawner,
         joint_broad_spawner
     ])
