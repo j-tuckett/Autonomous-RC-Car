@@ -40,11 +40,11 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'gz_args': '-r ' + os.path.join(
+            'gz_args': '-r -s ' + os.path.join(
                 get_package_share_directory(package_name),
                 'config',
                 'worlds',
-                'default.sdf'
+                'more_objects.sdf'
             )
 #             'gz_args': '-r empty.sdf'
         }.items()
@@ -101,6 +101,29 @@ def generate_launch_description():
         parameters=[{"use_sim_time": True}],
     )
 
+    # RViz2 Node
+    rviz_config = os.path.join(
+        get_package_share_directory(package_name),
+        'config',
+        'rviz',
+        'lidar.rviz'
+    )
+    
+
+    rviz = TimerAction(
+        period=2.0,
+        actions=[
+            Node(
+                package='rviz2',
+                executable='rviz2',
+                arguments=['-d', rviz_config],
+                parameters=[{'use_sim_time': True}],
+                output='screen'
+            )
+        ]
+    )
+
+
     # Launch everything
     return LaunchDescription([
         gz_resource_path,
@@ -109,7 +132,8 @@ def generate_launch_description():
         spawn_entity,
         gazebo_bridge,
         diff_drive_spawner,
-        joint_broad_spawner
+        joint_broad_spawner,
+        rviz
     ])
 
 
