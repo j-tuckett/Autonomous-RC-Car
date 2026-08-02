@@ -8,18 +8,19 @@ controller_manager:
             
         joint_broad:
             type: joint_state_broadcaster/JointStateBroadcaster
-            
+
             
             
 diff_cont:
     ros__parameters:
         publish_rate: 50.0
         use_sim_time: true
+        enable_odom_tf: true
         base_frame_id: base_link
         
         left_wheel_names: ['bl_wheel_joint', 'fl_wheel_joint']
         right_wheel_names: ['br_wheel_joint', 'fr_wheel_joint']        
-        wheel_separation: 0.0767 # 87.1mm
+        wheel_separation: 0.0851 # 85.1mm
         wheel_radius: 0.0325 # 32.5mm
         
         use_stamped_vel: false

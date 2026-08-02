@@ -138,3 +138,7 @@ def generate_launch_description():
 
 
 # ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -r /cmd_vel:=/diff_cont/cmd_vel   -p stamped:=true
+# ros2 launch slam_toolbox online_async_launch.py params_file:=./src/rccar_lab/config/mapper_params_online_async.yaml use_sim_time:=truesudo
+
+
+# ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -r /cmd_vel:=/turtle1/cmd_vel

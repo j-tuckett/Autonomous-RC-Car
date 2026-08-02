@@ -1,0 +1,51 @@
+[0.021s] Invoking command in '/home/ubuntu/source/rccar_ws/build/rccar_lab': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/source/rccar_ws/build/rccar_lab -- -j22 -l22
+[0.082s] Invoked command in '/home/ubuntu/source/rccar_ws/build/rccar_lab' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/source/rccar_ws/build/rccar_lab -- -j22 -l22
+[0.100s] Invoking command in '/home/ubuntu/source/rccar_ws/build/rccar_lab': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/source/rccar_ws/build/rccar_lab
+[0.117s] -- Install configuration: ""
+[0.119s] -- Execute custom install script
+[0.120s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/launch_sim.launch.py
+[0.120s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/rsp.launch.py
+[0.123s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/old_robot_core.xacro
+[0.123s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot.urdf.xacro
+[0.123s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot_core.xacro
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/ros2_control.xacro
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/test_control.xacro
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/test_inertia.xacro
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/test_robot.xacro
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/mapper_params_online_async.yaml
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/my_controllers.yaml
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/rviz/lidar.rviz
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/default.sdf
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/more_objects.sdf
+[0.124s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/CMakeLists.txt
+[0.124s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/config/joint_names_car_urdf5.yaml
+[0.138s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/export.log
+[0.139s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/launch/display.launch
+[0.139s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/launch/gazebo.launch
+[0.139s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/base_link.STL
+[0.140s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/battery_link.STL
+[0.140s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/bl_wheel_link.STL
+[0.140s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/br_wheel_link.STL
+[0.140s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/ebox_link.STL
+[0.140s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/fl_wheel_link.STL
+[0.140s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/fr_wheel_link.STL
+[0.140s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/meshes/laser_frame.STL
+[0.154s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/package.xml
+[0.154s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/urdf/car_urdf.csv
+[0.173s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/urdf/car_urdf.urdf
+[0.189s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/ament_index/resource_index/package_run_dependencies/rccar_lab
+[0.190s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/ament_index/resource_index/parent_prefix_path/rccar_lab
+[0.190s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/ament_prefix_path.sh
+[0.190s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/ament_prefix_path.dsv
+[0.190s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/path.sh
+[0.190s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/environment/path.dsv
+[0.191s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.bash
+[0.191s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.sh
+[0.191s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.zsh
+[0.192s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/local_setup.dsv
+[0.192s] -- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/package.dsv
+[0.208s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/ament_index/resource_index/packages/rccar_lab
+[0.208s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/cmake/rccar_labConfig.cmake
+[0.208s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/cmake/rccar_labConfig-version.cmake
+[0.208s] -- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/package.xml
+[0.211s] Invoked command in '/home/ubuntu/source/rccar_ws/build/rccar_lab' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/source/rccar_ws/build/rccar_lab

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="robot">
+  
+  <!-- Material Definitions -->
+  <material
+    name="chassis_color">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+
+  <material
+    name="ebox_color">
+    <color
+      rgba="0 0 0 1" />
+  </material>
+
+  <material
+    name="battery_color">
+    <color
+      rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+  </material>
+
+  <material
+    name="lidar_color">
+    <color
+      rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+  </material>
+
+  <material
+    name="wheel_color">
+    <color
+      rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+  </material>
+
+
+
+  <!-- Robot -->
+
+  <!-- BASE LINK -->
+
+  <link
+    name="base_link">
+  </link>
+
+  <!-- BASE LINK FOOTPRINT -->
+  <joint
+    name="base_footprint_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="base_footprint"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_footprint">
+  </link>
+
+
+  <!-- Chassis -->
+  <link
+    name="chassis_link">
+    <inertial>
+      <origin
+        xyz="-0.00388152940223453 0.0491487550157473 0.0959822836251013"
+        rpy="0 0 0" />
+      <mass
+        value="0.253438557114572" />
+      <inertia
+        ixx="0.000230915983626972"
+        ixy="-1.09834124977415E-21"
+        ixz="-1.08995305646286E-20"
+        iyy="0.000388552862570868"
+        iyz="8.74964921922857E-21"
+        izz="0.000171792964937591" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="chassis_color"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chassis_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00388152940223453 0.0491487550157473 0.0959822836251013"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chassis_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <gazebo reference="chassis_link">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <!-- Electrical Box -->
+  <link
+    name="ebox_link">
+    <inertial>
+      <origin
+        xyz="2.38524477946811E-17 0.00665420516682762 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0194293141652943" />
+      <inertia
+        ixx="5.88923381835339E-06"
+        ixy="-1.73689752951498E-21"
+        ixz="1.52034934940776E-21"
+        iyy="1.88651943786397E-05"
+        iyz="-1.7640556224745E-21"
+        izz="1.44863163441747E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/ebox_link.STL" />
+      </geometry>
+      <material
+        name="ebox_color"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/ebox_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ebox_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0036768 -0.095982 0.0485"
+      rpy="${pi/2} 0 0" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="ebox_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="ebox_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- Battery -->
+
+  <link
+    name="battery_link">
+    <inertial>
+      <origin
+        xyz="-8.23993651088983E-18 0.0074804833993982 -0.000123841648641848"
+        rpy="0 0 0" />
+      <mass
+        value="0.0281697989109725" />
+      <inertia
+        ixx="1.06924152126357E-05"
+        ixy="1.59206567495512E-22"
+        ixz="-1.36499816485458E-21"
+        iyy="1.21105909928422E-05"
+        iyz="6.80855023768559E-11"
+        izz="2.44479179923402E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/battery_link.STL" />
+      </geometry>
+      <material
+        name="battery_color"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/battery_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="battery_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0036768 -0.095982 0.0285"
+      rpy="${pi/2} 0 0" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="battery_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="battery_link">
+      <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- LiDAR -->
+  <link
+    name="laser_frame">  
+    <inertial>
+      <origin
+        xyz="0.00645097632173484 -0.0220370930302956 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.291987614489637" />
+      <inertia
+        ixx="0.000179322343491855"
+        ixy="1.7915823262772E-05"
+        ixz="-2.87404142118372E-20"
+        iyy="0.00023562662350046"
+        iyz="8.52970502955622E-21"
+        izz="0.000240449680414699" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="${pi/2} 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="lidar_color"/>
+    </visual>
+    
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.016177 -0.095982 0.13493"
+      rpy="0 0 0" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="laser_frame" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="laser_frame">
+      <material>Gazebo/DarkGrey</material>
+      <sensor name="laser" type="gpu_lidar">
+        <pose> 0 0 0 0 0 0 </pose>
+        <visualize>true</visualize>
+        <update_rate>10</update_rate>
+        <topic>scan</topic>
+        <gz_frame_id>laser_frame</gz_frame_id>
+        <lidar>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14</min_angle>
+              <max_angle>3.14</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.15</min>
+            <max>12</max>
+            <resolution>0.01</resolution>
+          </range>
+
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.001</stddev>
+          </noise>
+
+        </lidar>
+
+        <always_on>1</always_on>
+        <visualize>1</visualize>
+
+      </sensor>
+
+  </gazebo>
+
+  <!-- Front Right Wheel -->
+  <link
+    name="fr_wheel_link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -0.0170468370852515 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0746841951683647" />
+      <inertia
+        ixx="2.49513056185901E-05"
+        ixy="-6.2651021722227E-22"
+        ixz="-4.2351647362715E-22"
+        iyy="4.21618272671167E-05"
+        iyz="4.23110158097473E-21"
+        izz="2.49513056185901E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/fr_wheel_link.STL" />
+      </geometry>
+      <material
+        name="wheel_color"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/fr_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.042027 -0.15098 0.0325"
+      rpy="3.1416 0.31457 1.5708" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="fr_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <gazebo reference="fr_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <!-- Front Left Wheel -->
+
+  <link
+    name="fl_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -0.0170468370852515 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0746841951683647" />
+      <inertia
+        ixx="2.49513056185901E-05"
+        ixy="1.22799028140705E-21"
+        ixz="0"
+        iyy="4.21618272671167E-05"
+        iyz="3.24468513501506E-21"
+        izz="2.49513056185901E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/fl_wheel_link.STL" />
+      </geometry>
+      <material
+        name="wheel_color"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/fl_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.034673 -0.15098 0.0325"
+      rpy="3.1416 0.84097 -1.5708" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="fl_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <gazebo reference="fr_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <!-- Back Left Wheel-->
+
+  <link
+    name="bl_wheel_link">
+    <inertial>
+      <origin
+        xyz="4.5102810375397E-17 -0.0170468370852515 -2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0746841951683647" />
+      <inertia
+        ixx="2.49513056185901E-05"
+        ixy="3.43897869697203E-21"
+        ixz="-1.6940658945086E-21"
+        iyy="4.21618272671167E-05"
+        iyz="2.99257736417889E-21"
+        izz="2.49513056185901E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/bl_wheel_link.STL" />
+      </geometry>
+      <material
+        name="wheel_color"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/bl_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.034673 -0.040982 0.0325"
+      rpy="0 -0.54324 1.5708" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="bl_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <gazebo reference="bl_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <!-- Back Right Wheel -->
+  <link
+    name="br_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -0.0170468370852515 -3.12250225675825E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0746841951683647" />
+      <inertia
+        ixx="2.49513056185901E-05"
+        ixy="3.77954827156255E-21"
+        ixz="-3.3881317890172E-21"
+        iyy="4.21618272671167E-05"
+        iyz="-3.17744074468971E-21"
+        izz="2.49513056185901E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/br_wheel_link.STL" />
+      </geometry>
+      <material
+        name="wheel_color"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rccar_lab/car_urdf/meshes/br_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.044027 -0.040982 0.0325"
+      rpy="3.1416 1.1567 1.5708" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="br_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <gazebo reference="br_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+</robot>

@@ -1,0 +1,24 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/launch_sim.launch.py
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/rsp.launch.py
+-- Symlinking: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/old_robot_core.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot.urdf.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot_core.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/ros2_control.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/test_control.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/test_inertia.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/test_robot.xacro
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/mapper_params_online_async.yaml
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/my_controllers.yaml
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/rviz/lidar.rviz
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/default.sdf
+-- Up-to-date symlink: /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/more_objects.sdf
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:105 (message):
+  ament_cmake_symlink_install_directory() can't find
+  '/home/ubuntu/source/rccar_ws/src/rccar_lab/car_urdf'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:319 (ament_cmake_symlink_install_directory)
+  cmake_install.cmake:46 (include)
+
+[0m

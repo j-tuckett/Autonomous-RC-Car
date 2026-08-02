@@ -44,7 +44,7 @@
             <state_interface name="velocity"/>
             <state_interface name="position"/>
         </joint>    
-        
+          
     </ros2_control>
 
     <!-- Plugin that tells Gazebo to use ros2 control-->

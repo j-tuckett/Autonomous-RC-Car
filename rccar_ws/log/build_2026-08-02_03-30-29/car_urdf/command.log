@@ -1,0 +1,1 @@
+Invoking command in '/home/ubuntu/source/rccar_ws/build/car_urdf': /usr/bin/cmake /home/ubuntu/source/rccar_ws/src/car_urdf -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/ubuntu/source/rccar_ws/install/car_urdf
