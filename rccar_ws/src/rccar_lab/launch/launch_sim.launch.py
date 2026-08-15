@@ -12,6 +12,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     package_name = 'rccar_lab'
+    use_sim_time = True
 
     # Robot State Publisher
     rsp = IncludeLaunchDescription(
@@ -27,6 +28,29 @@ def generate_launch_description():
             'use_ros2_control': 'true'
         }.items()
     )
+
+#    teleop = IncludeLaunchDescription(
+#        PythonLaunchDescriptionSource([os.path.join(
+#            get_package_share_directory(package_name), 'launch', 'teleop.launch.py'
+#        )]), launch_arguments={'use_sim_time': 'true'}.items()
+#    )
+
+    twist_mux_params = os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
+    twist_mux = Node(
+        package="twist_mux",
+        executable="twist_mux",
+        #output="screen",
+        parameters=[twist_mux_params, {'use_sim_time': use_sim_time}],
+        remappings=[('/cmd_vel_out','/cmd_vel')]
+    )
+
+ #   twist_stamper = Node(
+ #       package='twist_stamper',
+ #       executable='twist_stamper',
+ #       parameters=[{'use_sim_time': use_sim_time}],
+ #       remappings=[('/cmd_vel_in', '/cmd_vel'),
+ #                   ('/cmd_vel_out','/diff_cont/cmd_vel')]
+ #   )
 
     # Gazebo Sim launch
     gazebo_pkg_name = 'ros_gz_sim'
@@ -90,7 +114,7 @@ def generate_launch_description():
             package="controller_manager",
             executable="spawner",
             arguments=["diff_cont"],
-            parameters=[{"use_sim_time": True}],
+            parameters=[{"use_sim_time": use_sim_time}],
         )]
     )
 
@@ -98,7 +122,7 @@ def generate_launch_description():
         package="controller_manager",
         executable="spawner",
         arguments=["joint_broad"],
-        parameters=[{"use_sim_time": True}],
+        parameters=[{"use_sim_time": use_sim_time}],
     )
 
     # RViz2 Node
@@ -117,7 +141,7 @@ def generate_launch_description():
                 package='rviz2',
                 executable='rviz2',
                 arguments=['-d', rviz_config],
-                parameters=[{'use_sim_time': True}],
+                parameters=[{'use_sim_time': use_sim_time}],
                 output='screen'
             )
         ]
@@ -128,6 +152,9 @@ def generate_launch_description():
     return LaunchDescription([
         gz_resource_path,
         rsp,
+        #teleop,
+        twist_mux,
+        #twist_stamper,
         gazebo,
         spawn_entity,
         gazebo_bridge,
@@ -141,7 +168,7 @@ def generate_launch_description():
 # ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -r /cmd_vel:=/diff_cont/cmd_vel   -p stamped:=true
 
 ### SLAM stuff
-# ros2 launch slam_toolbox online_async_launch.py params_file:=./src/rccar_lab/config/mapper_params_online_async.yaml use_sim_time:=truesudo
+# ros2 launch slam_toolbox online_async_launch.py params_file:=./src/rccar_lab/config/mapper_params_online_async.yaml use_sim_time:=true
 
 ### move the turtle
 # ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -r /cmd_vel:=/turtle1/cmd_vel
@@ -149,3 +176,9 @@ def generate_launch_description():
 ### publish a twist stamped message to gazebo
 #ros2 topic pub -r 10 /diff_cont/cmd_vel geometry_msgs/msg/TwistStamped \
 #"{header: {frame_id: ''}, twist: {linear: {x: 0.0}, angular: {z: 1.0}}}"
+
+# for nav 2
+# ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -p stamped:=true
+
+
+# install twist mux, create twist mux params file, launch twist mux with params file, launch SLAM & teleop & Nav2, go forth

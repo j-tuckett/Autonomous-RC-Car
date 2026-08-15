@@ -1,0 +1,19 @@
+1. Finish Nav2 video / implement navigation
+    - Will likely need to update friction coefficients to make RViz match Gazebo better
+    - Can I somehow update the coefs for RViz to match Gazebo, instead of vice versa?
+    need to remap topc. Nav2 publishes to /cmd_vel, we want it to publish to /diff_cont/cmd_vel
+2. Design test environment in Gazebo
+3. Program behavioral algo / behavior tree
+    - move around and inspect objects
+    - return to resting spot
+    - follow me, sit down if i've been in a given spot for a while
+    - "go to bed" if it's a certain time / i'm not home, "wake up" when i wake up / get back home
+
+
+
+
+We launch RViz, Gazebo, & SLAM as usual to get our map
+We then launch Nav2 to get our costmap
+We need to launch our teleop node so we can control it
+We need to launch our twist mux so we can manage both the Nav2 commands (on /cmd_vel) and the teleop commands (I guess also on /cmd_vel? Seems like it should be a separate topic)
+We need to launch our twist stamper so Nav2's messages are stamped, as our controller expects its messages on /diff_cont/cmd_vel, which uses TwistStamped messages

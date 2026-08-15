@@ -1,5 +1,9 @@
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/launch_sim.launch.py
+/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/localization_launch.py
+/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/navigation_launch.py
+/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/online_async_launch.py
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/rsp.launch.py
+/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/launch/teleop.launch.py
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/old_robot_core.xacro
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot.urdf.xacro
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/robot_core.xacro
@@ -9,7 +13,9 @@
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/description/test_robot.xacro
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/mapper_params_online_async.yaml
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/my_controllers.yaml
+/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/nav2_params.yaml
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/rviz/lidar.rviz
+/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/twist_mux.yaml
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/default.sdf
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/more_objects.sdf
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/CMakeLists.txt
