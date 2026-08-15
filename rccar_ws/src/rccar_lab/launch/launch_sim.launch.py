@@ -137,8 +137,15 @@ def generate_launch_description():
     ])
 
 
+### control robot's movement in Gazebo / RViz
 # ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -r /cmd_vel:=/diff_cont/cmd_vel   -p stamped:=true
+
+### SLAM stuff
 # ros2 launch slam_toolbox online_async_launch.py params_file:=./src/rccar_lab/config/mapper_params_online_async.yaml use_sim_time:=truesudo
 
-
+### move the turtle
 # ros2 run teleop_twist_keyboard teleop_twist_keyboard   --ros-args -r /cmd_vel:=/turtle1/cmd_vel
+
+### publish a twist stamped message to gazebo
+#ros2 topic pub -r 10 /diff_cont/cmd_vel geometry_msgs/msg/TwistStamped \
+#"{header: {frame_id: ''}, twist: {linear: {x: 0.0}, angular: {z: 1.0}}}"

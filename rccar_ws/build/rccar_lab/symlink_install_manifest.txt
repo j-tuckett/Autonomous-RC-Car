@@ -13,7 +13,7 @@
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/default.sdf
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/config/worlds/more_objects.sdf
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/CMakeLists.txt
-/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/config/joint_names_car_urdf7.yaml
+/home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/config/joint_names_car_urdf11.yaml
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/export.log
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/launch/display.launch
 /home/ubuntu/source/rccar_ws/install/rccar_lab/share/rccar_lab/car_urdf/launch/gazebo.launch
