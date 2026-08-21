@@ -8,11 +8,7 @@ twist_mux:
         topic   : cmd_vel_keyboard
         timeout : 0.5
         priority: 90
-      navigation:
-        topic   : cmd_vel
+      nav2:
+        topic   : cmd_vel_nav
         timeout : 0.5
-        priority: 10
-      joystick:
-        topic   :  teleop_vel
-        timeout : 0.5
-        priority: 100
+        priority: 70

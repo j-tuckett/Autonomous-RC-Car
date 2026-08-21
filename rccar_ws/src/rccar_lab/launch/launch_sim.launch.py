@@ -41,7 +41,7 @@ def generate_launch_description():
         executable="twist_mux",
         #output="screen",
         parameters=[twist_mux_params, {'use_sim_time': use_sim_time}],
-        remappings=[('/cmd_vel_out','/cmd_vel')]
+        remappings=[('/cmd_vel_out','/diff_cont/cmd_vel')]
     )
 
  #   twist_stamper = Node(
